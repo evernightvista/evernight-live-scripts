@@ -150,3 +150,9 @@ chown root:root /var/lib/AccountsService/users/evernight
 # Remove Recycle Bin and Firefox on Desktop
 rm /home/evernight/Desktop/trash:⁄.desktop
 rm /home/evernight/Desktop/org.mozilla.firefox.desktop
+
+# sudo-rs fix
+cat > /etc/sudoers.d/50-live << SUDOEOF
+%wheel    ALL=(ALL) NOPASSWD: ALL
+SUDOEOF
+
